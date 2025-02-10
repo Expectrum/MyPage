@@ -1,0 +1,234 @@
+body{
+   background: linear-gradient(to top, #000000, #808080, #000000);
+   min-height: 100vh; /* Asegura que cubra toda la pantalla */  
+}
+
+/* Estilo para el header */
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between; /* Esto asegura que los elementos se distribuyan entre izquierda y derecha */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+ }
+ 
+ 
+#logo-head{
+    height: 50px;
+    width: 50px;
+}
+ 
+ 
+ /* Estilo para el enlace de "Contact" */
+ .contact-link {
+   margin-left: 10px;
+   cursor: pointer;
+   position: relative;
+   color: white;
+   font-weight: bold;
+   font-size: 15px;
+   text-decoration: none;
+ }
+ 
+ .contact-link:hover{
+    color: aqua;
+    text-decoration: underline  aquamarine;
+ }
+
+/* Lista de contactos (aparece al hacer hover) */
+.contact-list {
+    display:none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+ }
+ 
+ /* Cuando haces hover sobre "Contact", aparece la lista */
+/* Cuando haces hover sobre "Contact", aparece la lista */
+.contact-link:hover + .contact-list,
+.contact-list:hover {
+    display: block;
+}
+
+ 
+ 
+ /* Estilo para los elementos de la lista */
+ .contact-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .contact-list li {
+    margin-bottom: 10px;
+ }
+ 
+ /* Enlaces dentro de la lista */
+ .contact-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+ }
+ 
+ /* Estilo de las imágenes en la lista */
+ .contact-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+ }
+
+ .links-right{
+    color: black;
+    font-style: normal;
+ }
+
+#link-mail:hover{
+   color: red;
+   background-color: #FFCCCC;
+}
+
+#link-wapp:hover{
+   color: green;
+   background-color: #CCFFCC;
+}
+
+#link-linkedin:hover{
+   color: blue;
+   background-color: #CCEFFF;
+}
+
+#link-git:hover{
+   color: gray;
+   background-color: #E0E0E0;
+}
+
+#title{
+   text-align: center;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 5vh;
+   color: red;
+}
+
+
+
+/* Estilo para la sección About Me */
+#about-me, h2, h3 {
+   text-align: center;
+   color: white;
+   padding: 20px;
+   margin: 20px auto;
+   max-width: 900px;
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3{
+   color: white;
+}
+
+#about-me #introduction p {
+   font-size: 1.1rem;
+   line-height: 1.6;
+   margin-bottom: 15px;
+}
+
+#about-me ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+#about-me ul li {
+   font-size: 1.1rem;
+   margin-bottom: 8px;
+   line-height: 1.5;
+}
+
+/* Estilo para el footer */
+footer {
+   background-color: #333;
+   color: white;
+   text-align: center;
+   padding: 15px;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+
+footer p {
+   margin: 0;
+   font-size: 1rem;
+}
+
+@keyframes slideInRight {
+   from {
+       transform: translateX(100%);
+       opacity: 0;
+   }
+   to {
+       transform: translateX(0);
+       opacity: 1;
+   }
+}
+
+@keyframes slideInLeft {
+   from {
+       transform: translateX(-100%);
+       opacity: 0;
+   }
+   to {
+       transform: translateX(0);
+       opacity: 1;
+   }
+}
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
+}
+
+#about-me p {
+   animation: slideInRight 1s ease-in-out;
+}
+
+
+#about-me ul {
+   animation: slideInLeft 1s ease-in-out;
+}
+
+#about-me h2, 
+#about-me h3 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+
+
+ /* Responsividad para dispositivos pequeños */
+ @media (max-width: 768px) {
+    header {
+       flex-direction: column;
+       align-items: flex-start;
+    }
+ 
+    .contact-list {
+       position: static;
+       width: 100%;
+       box-shadow: none;
+    }
+ }
+ 
